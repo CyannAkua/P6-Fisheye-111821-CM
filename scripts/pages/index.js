@@ -1,5 +1,4 @@
 async function getPhotographers() {
-        // Penser à remplacer par les données récupérées dans le json
         const photographers = [
         {
 			"name": "Ellie-Rose Wilkens",
@@ -46,7 +45,6 @@ async function getPhotographers() {
 			"price": 300,
 			"portrait": "MarcelNikolic.jpg"
 		}]
-        // et bien retourner le tableau photographers seulement une fois
         return ({
             photographers: [...photographers]})
     }
