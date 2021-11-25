@@ -4,7 +4,7 @@ function photographerFactory(data) {
     const picture = `assets/PhotographersIDPhotos/${portrait}`;
 
     function getUserCardDOM() {
-        const article = document.createElement( 'article' );
+        const article = document.querySelector(".photograph-header");
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         const h2 = document.createElement( 'h2' );

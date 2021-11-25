@@ -19,11 +19,10 @@ async function getPhotographer() {
   }
 }
 async function displayData(photographer) {
-    const photographersSection = document.querySelector(".photograph-header");
+    const photographerHeader = document.querySelector(".photograph-header");
         const photographerModel = photographerFactory(photographer);
-        const userCardDOM = photographerModel.getUserCardDOM();
-        photographersSection.appendChild(userCardDOM);
-};
+        const userCardDOM = photographerModel.getUserCardDOM()}
+        
 async function init() {
     // Récupère les datas des photographes
     const { photographer } = await getPhotographer();
