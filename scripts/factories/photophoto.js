@@ -4,7 +4,8 @@ function photographerFactory(data) {
     const picture = `assets/PhotographersIDPhotos/${portrait}`;
 
     function getUserCardDOM() {
-        const article = document.querySelector(".photograph-header");
+        const header = document.querySelector(".photograph-header");
+        const likenprice = document.querySelector(".like-n-price")
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         const h2 = document.createElement( 'h2' );
@@ -13,11 +14,14 @@ function photographerFactory(data) {
         h3.textContent = city + ", " + country;
         const h4 = document.createElement( 'h4' );
         h4.textContent = tagline;
-        article.appendChild(img)
-        article.appendChild(h2);
-        article.appendChild(h3);
-        article.appendChild(h4);
-        return (article);
+        header.appendChild(img)
+        header.appendChild(h2);
+        header.appendChild(h3);
+        header.appendChild(h4);
+        const pricey = document.createElement( 'h2')
+        pricey.textContent = price + "€ / jour"
+        likenprice.appendChild(pricey)
+        return (header);
     }
     return { getUserCardDOM }
 }

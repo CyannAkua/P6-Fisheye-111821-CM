@@ -12,5 +12,4 @@ async function init() {
   const photographers = await getData("photographers");
   displayData(photographers);
 }
-
 init();
