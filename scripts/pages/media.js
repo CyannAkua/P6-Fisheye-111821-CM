@@ -1,20 +1,10 @@
-var medias = "";
-var thisMedia = "";
-const media = [];
-async function getMedias() {
-  medias = await fetch("data/photographers.json")
-    .then((response) => response.json())
-    .then((data) => {
-      return data.media;
-    });
-  return { medias: medias };
-}
+let medias = "";
+let media = [];
 async function getMedia() {
-  await getMedias();
+  medias = await getData("media");
   for (let i = 0; i < medias.length; i++) {
     if (medias[i].photographerId == id) {
-      thisMedia = medias[i];
-      media.push(thisMedia);
+      media.push(medias[i]);
     }
   }
   return media;
@@ -22,11 +12,11 @@ async function getMedia() {
 async function displayData() {
   const mediaSection = document.querySelector(".media-section");
 
-  for (let i = 0; i < media.length; i++) {
-    const mediaModel = mediaFactory(media[i]);
+  media.forEach((_media) => {
+    const mediaModel = mediaFactory(_media);
     const mediaCardDOM = mediaModel.getUserCardDOM();
     mediaSection.appendChild(mediaCardDOM);
-  }
+  });
 }
 async function init() {
   await getMedia();

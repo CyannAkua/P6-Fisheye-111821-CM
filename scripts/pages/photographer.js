@@ -1,17 +1,9 @@
 const id = new URLSearchParams(window.location.search).get("id");
 var photographers = "";
 var thisPhotographer = "";
-async function getPhotographers() {
-  photographers = await fetch("data/photographers.json")
-    .then((response) => response.json())
-    .then((data) => {
-      return data.photographers;
-    });
-  return { photographers: photographers };
-}
 async function getPhotographer() {
-  await getPhotographers();
-  for (let i = 0; i < photographers.length; i++) {
+  photographers = await getData("photographers");
+  for (let i = 0; i < photographers.length; i++){
     if (photographers[i].id == id) {
       thisPhotographer = photographers[i];
       return { photographer: thisPhotographer };
@@ -23,10 +15,9 @@ async function displayHeader(photographer) {
   photographerModel.getUserCardDOM();
 }
 
-async function initphotographer() {
-  // Récupère les datas des photographes
+async function init() {
   const { photographer } = await getPhotographer();
   displayHeader(photographer);
 }
 
-initphotographer();
+init();
