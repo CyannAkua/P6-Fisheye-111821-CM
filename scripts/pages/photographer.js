@@ -14,19 +14,19 @@ async function getPhotographer() {
   for (let i = 0; i < photographers.length; i++) {
     if (photographers[i].id == id) {
       thisPhotographer = photographers[i];
-      return({photographer: thisPhotographer})
+      return { photographer: thisPhotographer };
     }
   }
 }
-async function displayData(photographer) {
-    const photographerHeader = document.querySelector(".photograph-header");
-        const photographerModel = photographerFactory(photographer);
-        const userCardDOM = photographerModel.getUserCardDOM()}
-        
-async function init() {
-    // Récupère les datas des photographes
-    const { photographer } = await getPhotographer();
-    displayData(photographer);
-};
+async function displayHeader(photographer) {
+  const photographerModel = photographerFactory(photographer);
+  photographerModel.getUserCardDOM();
+}
 
-init();
+async function initphotographer() {
+  // Récupère les datas des photographes
+  const { photographer } = await getPhotographer();
+  displayHeader(photographer);
+}
+
+initphotographer();
