@@ -1,15 +1,18 @@
-  async function init() {
-    const { photographer } = await getPhotographer();
-    media = [];
-    mediaSection.innerHTML = "";
-    await getMedia();
-    sortMedia()
-    calcLike()
-    displayHeader(photographer);
-    displayData();
-    modalName(photographer);
-    console.log(media)
-  }
-init()
+async function init() {
+  const { photographer } = await getPhotographer();
+  await initmedia();
+  displayHeader(photographer);
+  modalName(photographer);
+}
+async function initmedia() {
+  media = [];
+  mediaSection.innerHTML = "";
+  await getMedia();
+  sortMedia();
+  calcLike();
+  displayData();
+}
 
-sortList.addEventListener('change',init)
+init();
+
+sortList.addEventListener("change", initmedia);
