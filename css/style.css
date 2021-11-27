@@ -139,6 +139,7 @@ h5 {
 }
 .media-section article {
   display: grid;
+  width: 350px;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(2, auto);
 }
