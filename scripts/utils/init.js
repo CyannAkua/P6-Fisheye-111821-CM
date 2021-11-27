@@ -1,7 +1,3 @@
-async function init() {
-
-  }
-
   async function init() {
     const { photographer } = await getPhotographer();
     media = [];
@@ -15,3 +11,5 @@ async function init() {
     console.log(media)
   }
 init()
+
+sortList.addEventListener('change',init)
