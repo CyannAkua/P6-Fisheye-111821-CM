@@ -201,7 +201,7 @@ h5 {
   font-size: 24px;
   right: 34px;
   top: 22px;
-  font-weight: 600;
+  font-weight: 500;
   grid-area: 1/2/2/3;
 }
 .like-n-price h3 {
@@ -210,7 +210,7 @@ h5 {
   font-size: 24px;
   text-align: left;
   top: 22px;
-  font-weight: 600;
+  font-weight: 500;
   left: 30px;
 }
 .like-n-price h3 img {
