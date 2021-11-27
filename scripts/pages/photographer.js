@@ -16,10 +16,3 @@ async function displayHeader(photographer) {
   const photographerModel = photographerFactory(photographer);
   photographerModel.getUserCardDOM();
 }
-
-async function init() {
-  const { photographer } = await getPhotographer();
-  displayHeader(photographer);
-  modalName(photographer);
-}
-init();

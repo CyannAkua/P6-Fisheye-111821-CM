@@ -18,9 +18,15 @@ function photographerFactory(data) {
         header.appendChild(h2);
         header.appendChild(h3);
         header.appendChild(h4);
-        const pricey = document.createElement( 'h2')
-        pricey.textContent = price + "€ / jour"
-        likenprice.appendChild(pricey)
+        const pricey = document.createElement( 'h2');
+        const likey = document.createElement('h3');
+        const likeicon = document.createElement('img');
+        likeicon.setAttribute("src", "assets/icons/likesblack.svg");
+        pricey.textContent = price + "€ / jour";
+        likey.textContent = totalLike;
+        likenprice.appendChild(pricey);
+        likenprice.appendChild(likey);
+        likey.appendChild(likeicon);
         return (header);
     }
     return { getUserCardDOM }
