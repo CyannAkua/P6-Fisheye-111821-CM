@@ -16,7 +16,10 @@ h1 {
   color: #901c1c;
   margin-right: 100px;
 }
-h2,h3,h4,h5{
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 .logo {
@@ -26,7 +29,7 @@ h2,h3,h4,h5{
 
 .photographer_section {
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   justify-content: space-around;
   row-gap: 70px;
   margin: 100px 70px;
@@ -87,7 +90,7 @@ h2,h3,h4,h5{
   align-content: center;
   justify-content: space-around;
   justify-items: start;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding: 50px 0px;
   margin: 0 100px;
 }
@@ -98,7 +101,6 @@ h2,h3,h4,h5{
   font-weight: normal;
   font-size: 64px;
   color: #d3573c;
-
 }
 
 .photograph-header img {
@@ -135,10 +137,10 @@ h2,h3,h4,h5{
   justify-content: space-evenly;
   align-content: center;
 }
-.media-section article{
+.media-section article {
   display: grid;
-  grid-template-rows: repeat(2,auto);
-  grid-template-columns: repeat(2,auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
 }
 .media-section article img {
   height: 300px;
@@ -160,7 +162,7 @@ h2,h3,h4,h5{
   font-family: DM Sans;
   font-size: 24px;
   font-style: normal;
-  top:20px;
+  top: 20px;
   padding: 10px 3px 30px;
   letter-spacing: 0em;
 }
@@ -182,53 +184,45 @@ h2,h3,h4,h5{
   border-radius: 0px;
 }
 
-.like-n-price{
+.like-n-price {
   height: 90px;
-width: 375px;
-border-radius: 5px;
-background-color:#DB8876;
-position:fixed;
-right: 36px;
-bottom: -21px;
-display: grid;
-grid-template-columns: auto auto;
+  width: 375px;
+  border-radius: 5px;
+  background-color: #db8876;
+  position: fixed;
+  right: 36px;
+  bottom: -21px;
+  display: grid;
+  grid-template-columns: auto auto;
 }
-.like-n-price h2{
+.like-n-price h2 {
   position: relative;
   text-align: right;
   font-size: 24px;
   right: 34px;
   top: 22px;
+  font-weight: 600;
   grid-area: 1/2/2/3;
-  
 }
-.like-n-price h3{
+.like-n-price h3 {
   position: relative;
-grid-area: 1/1/2/2;
-font-size: 24px;
-text-align: left;
-top: 22px;
-left: 30px;
+  grid-area: 1/1/2/2;
+  font-size: 24px;
+  text-align: left;
+  top: 22px;
+  font-weight: 600;
+  left: 30px;
 }
-.like-n-price h3 img{
+.like-n-price h3 img {
   height: 18px;
-width: 18px;
-margin-left: 5px;
-border-radius: 0px;
+  width: 18px;
+  margin-left: 5px;
+  border-radius: 0px;
 }
-.sort-select{
-  margin:20px 0 0 100px;
+.sort-select {
+  margin: 20px 0 0 100px;
 }
-.sort-select label{
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;  
-}
-#sortList{
+.sort-select label {
   font-family: DM Sans;
   font-size: 18px;
   font-style: normal;
@@ -236,46 +230,57 @@ border-radius: 0px;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
-  background: #901C1C;
-  border:none;
+}
+#sortList {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: #901c1c;
+  border: none;
   border-radius: 5px;
   color: white;
   height: 69px;
-width: 170px; 
-padding: 23px 20px;
+  width: 170px;
+  padding: 23px 20px;
 }
-#sortList option{
+#sortList option {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
-  background: #901C1C;
-  border:none;
+  background: #901c1c;
+  border: none;
   border-radius: 5px;
   color: white;
   height: 200px;
-width: 170px; 
+  width: 170px;
 }
 
 @media screen and (max-width: 1250px) {
-  .media-section{
-    grid-template-columns: repeat(2,auto);
+  .media-section {
+    grid-template-columns: repeat(2, auto);
     justify-content: space-evenly;
     justify-items: center;
   }
-  .photograph-header h2,.photograph-header h3,.photograph-header h4{
+  .photograph-header h2,
+  .photograph-header h3,
+  .photograph-header h4 {
     position: relative;
-    left:10px
+    left: 10px;
   }
-  .contact_button{
+  .contact_button {
     margin: 20px;
   }
 }
 @media screen and (min-width: 1600px) {
-  .media-section{
-    grid-template-columns: repeat(4,auto);
+  .media-section {
+    grid-template-columns: repeat(4, auto);
     justify-content: space-evenly;
     justify-items: center;
   }
