@@ -1,18 +1,18 @@
 async function init() {
-  const { photographer } = await getPhotographer();
+  const {photographer} = await getPhotographer();
   await initmedia();
   displayHeader(photographer);
   modalName(photographer);
 }
 async function initmedia() {
   media = [];
+  sortBy = list.children[0].children[0].innerText;
   mediaSection.innerHTML = "";
-  await getMedia();
+  await getMedia();;
   sortMedia();
   calcLike();
   displayData();
 }
 
 init();
-
-sortList.addEventListener("change", initmedia);
+list.children[1].addEventListener('click',initmedia)

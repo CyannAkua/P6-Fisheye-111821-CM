@@ -132,7 +132,7 @@ h5 {
 .media-section {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  margin: 100px 0;
+  margin: 105px 0;
   justify-items: center;
   justify-content: space-evenly;
   align-content: center;
@@ -142,7 +142,7 @@ h5 {
   width: 350px;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(2, auto);
-  align-items: center
+  align-items: center;
 }
 .media-section article img {
   height: 300px;
@@ -221,48 +221,71 @@ h5 {
   margin-left: 5px;
   border-radius: 0px;
 }
-.sort-select {
-  margin: 20px 0 0 100px;
-}
-.sort-select label {
-  font-family: DM Sans;
+.lablist {
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;
+  margin: 10px 0px 0px 100px;
+  position: relative;
+  top: 20px;
+  float: left;
 }
-#sortList {
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;
-  background: #901c1c;
-  border: none;
-  border-radius: 5px;
-  color: white;
+.listContainer {
+  position: absolute;
+  display: inline-block;
   height: 69px;
   width: 170px;
-  padding: 23px 20px;
+  cursor: default;
+  margin: 10px 15px 10px;
 }
-#sortList option {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;
-  background: #901c1c;
-  border: none;
-  border-radius: 5px;
+.listValue {
+  display: block;
+  background-color: #911c1c;
   color: white;
-  height: 200px;
+  height: 70px;
   width: 170px;
-  padding-top: 10px;
+  border-radius: 5px;
+}
+.listValue span {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  top: 23px;
+  left: 20px;
+}
+
+.listOptions {
+  position: absolute;
+  background-color: #911c1c;
+  color: white;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
+  text-align: left;
+  width: 170px;
+  border-radius: 5px;
+  top: -5px;
+  display: none;
+}
+
+.listOption {
+  border-top: white 1px solid;
+  position: relative;
+  left: 10px;
+  width: 130px;
+  padding: 14px 10px;
+}
+
+.listIcon {
+  width: 16px;
+  height: 10px;
+  position: relative;
+  right: 18px;
+  float: right;
+  top: 28px;
 }
 
 @media screen and (max-width: 1250px) {
@@ -279,6 +302,9 @@ h5 {
   }
   .contact_button {
     margin: 20px;
+  }
+  .lablist {
+    margin:10px 0 0 9vw;
   }
 }
 @media screen and (min-width: 1600px) {
