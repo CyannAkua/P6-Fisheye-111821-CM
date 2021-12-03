@@ -142,6 +142,7 @@ h5 {
   width: 350px;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(2, auto);
+  align-items: center
 }
 .media-section article img {
   height: 300px;
@@ -261,6 +262,7 @@ h5 {
   color: white;
   height: 200px;
   width: 170px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1250px) {
