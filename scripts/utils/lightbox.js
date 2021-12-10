@@ -38,15 +38,14 @@ nextArrow.addEventListener("click", (e) => {
 });
 function pic() {
     if(currentTarget.firstChild.tagName == 'VIDEO'){
-        videoHold.children[0].src = currentTarget.children[0].src;
+        videoHold.src = currentTarget.children[0].src;
         videoHold.style.display = "block";
         imageHold.style.display = "none";
-        
     }
   else {imageHold.style.display="";
   videoHold.style.display = "none";
-  imageHold.src = currentTarget.children[0].src;}
-  imageName.innerText = currentTarget.children[1].innerText;
+  imageHold.src = currentTarget.children[0].src;
+  imageName.innerText = currentTarget.children[1].innerText;}
   checkArrow();
 }
 
