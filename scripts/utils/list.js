@@ -17,9 +17,10 @@ function toggleListOptions()
 
 	}
 }
-
+list.children[1].addEventListener("keypress",selectListOption)
 function selectListOption()
 {
+  console.log(event)
     // l'option clicked
 	const option = event.target;
 	// la valeur de l'option clicked
@@ -32,7 +33,8 @@ function selectListOption()
 	// put old value of clicked option in list value
 	listValue.innerText = optionValue;
     sortBy = list.children[0].children[0].innerText
-    toggleListOptions()
+    toggleListOptions();
+    initmedia();
 }
 
 function sortMedia() {

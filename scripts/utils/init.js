@@ -15,4 +15,3 @@ async function initmedia() {
 }
 
 init();
-list.children[1].addEventListener('click',initmedia)
