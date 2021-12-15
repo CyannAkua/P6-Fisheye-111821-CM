@@ -9,25 +9,27 @@ function mediaFactory(data) {
     const vdo = document.createElement("video");
     const h2 = document.createElement( 'h2' );
     const h3 = document.createElement( 'h3' );
-    const likeicon = document.createElement('img')
+    const likeicon = document.createElement('img');
     h3.textContent = likes;
     likeicon.setAttribute("src", "assets/icons/likes.svg");
-    likeicon.setAttribute("alt","Likes")
-    likeicon.setAttribute("class","likeIcon")
+    likeicon.setAttribute("alt","Likes");
+    likeicon.setAttribute("class","likeIcon");
     if (video !== undefined) {
       vdo.setAttribute("src", mp4);
+      vdo.setAttribute("tabindex","0");
       article.appendChild(vdo);
     }
     if (image !== undefined) {
       img.setAttribute("src", picture);
       img.setAttribute("alt", title);
+      img.setAttribute("tabindex","0");
       article.appendChild(img);
       h2.textContent = title;
-      article.appendChild(h2)
+      article.appendChild(h2);
     }
-    article.appendChild(h3)
-    article.appendChild(likeicon)
+    article.appendChild(h3);
+    article.appendChild(likeicon);
     return article;
   }
-  return { getUserCardDOM };
+  return { getUserCardDOM };        
 }
