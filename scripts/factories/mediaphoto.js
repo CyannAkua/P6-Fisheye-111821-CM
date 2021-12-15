@@ -10,20 +10,23 @@ function mediaFactory(data) {
     const h2 = document.createElement( 'h2' );
     const h3 = document.createElement( 'h3' );
     const likeicon = document.createElement('img')
-    h2.textContent = title;
-    h3.textContent = likes + ' ';
+    h3.textContent = likes;
     likeicon.setAttribute("src", "assets/icons/likes.svg");
+    likeicon.setAttribute("alt","Likes")
+    likeicon.setAttribute("class","likeIcon")
     if (video !== undefined) {
       vdo.setAttribute("src", mp4);
       article.appendChild(vdo);
     }
     if (image !== undefined) {
       img.setAttribute("src", picture);
+      img.setAttribute("alt", title);
       article.appendChild(img);
+      h2.textContent = title;
+      article.appendChild(h2)
     }
-    article.appendChild(h2)
     article.appendChild(h3)
-    h3.appendChild(likeicon)
+    article.appendChild(likeicon)
     return article;
   }
   return { getUserCardDOM };
