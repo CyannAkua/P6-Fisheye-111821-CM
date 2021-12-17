@@ -7,7 +7,7 @@ async function getPhotographer() {
   for (let i = 0; i < photographers.length; i++){
     if (photographers[i].id == id) {
       thisPhotographer = photographers[i];
-      return { photographer: thisPhotographer };
+      return {photographer : thisPhotographer};
     }
   }
 }

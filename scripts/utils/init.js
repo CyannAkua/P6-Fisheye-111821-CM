@@ -12,6 +12,8 @@ async function initmedia() {
   sortMedia();
   calcLike();
   displayData();
+  likeEL();
+  articlePicEL();
 }
 
 init();

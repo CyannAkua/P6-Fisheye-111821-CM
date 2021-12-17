@@ -22,17 +22,17 @@ function photographerFactory(data) {
         const pricey = document.createElement( 'h2');
         const likey = document.createElement('h2');
         const likeicon = document.createElement('img');
-        likeicon.setAttribute("src", "assets/icons/likesblack.svg");
+        likeicon.setAttribute("src", "assets/icons/likes.svg");
         likeicon.setAttribute("alt", "Likes");
         pricey.textContent = price + "€ / jour";
         pricey.setAttribute("class","prices")
         likey.setAttribute("class","likes")
-        likey.textContent = totalLike + " ";
+        likey.textContent = totalLike;
         likenprice.appendChild(pricey);
         likenprice.appendChild(likey);       
         const pageTitle = document.getElementsByTagName("title")[0];
         pageTitle.textContent = "Fisheye - " + name;
-        likey.appendChild(likeicon);
+        likenprice.appendChild(likeicon);
         return (header);
     }
     return { getUserCardDOM }

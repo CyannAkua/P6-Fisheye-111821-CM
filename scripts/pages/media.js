@@ -1,6 +1,5 @@
 let medias = "";
 let media = [];
-let totalLike = "";
 const mediaSection = document.querySelector(".media-section");
 
 async function getMedia() {
@@ -20,12 +19,3 @@ async function displayData() {
     mediaSection.appendChild(mediaCardDOM);
   });
 }
-
-function calcLike() {
-  let tempLike = 0;
-  for (i = 0; i < media.length; i++) {
-    tempLike = tempLike + media[i].likes;
-    totalLike = tempLike;
-  }
-}
-

@@ -142,7 +142,7 @@ h5 {
   display: grid;
   width: 350px;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: auto 50px;
   align-items: center;
 }
 .media-section article img {
@@ -205,10 +205,11 @@ h5 {
 }
 .like-n-price .likes {
   position: relative;
-  text-align: right;
   font-size: 24px;
-  right: 34px;
-  top: 22px;
+  bottom: 8px;
+  left: 40px;
+  justify-self: left;
+  align-self: center;
   font-weight: 500;
   grid-area: 1/2/2/3;
 }
@@ -221,11 +222,18 @@ h5 {
   font-weight: 500;
   left: 30px;
 }
-.like-n-price h3 img {
+.like-n-price img {
   height: 18px;
+  grid-area: 1/2/2/3;
   width: 18px;
+  filter:brightness(0);
   margin-left: 5px;
+  bottom:8px;
+  right: 34px;
   border-radius: 0px;
+  position: relative;
+  justify-self: right;
+  align-self: center;
 }
 .lablist {
   font-size: 18px;

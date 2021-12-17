@@ -12,8 +12,9 @@ function mediaFactory(data) {
     const likeicon = document.createElement('img');
     h3.textContent = likes;
     likeicon.setAttribute("src", "assets/icons/likes.svg");
-    likeicon.setAttribute("alt","Likes");
+    likeicon.setAttribute("alt",likes + " Likes");
     likeicon.setAttribute("class","likeIcon");
+    likeicon.setAttribute("tabindex","0");
     if (video !== undefined) {
       vdo.setAttribute("src", mp4);
       vdo.setAttribute("tabindex","0");
@@ -24,9 +25,9 @@ function mediaFactory(data) {
       img.setAttribute("alt", title);
       img.setAttribute("tabindex","0");
       article.appendChild(img);
-      h2.textContent = title;
-      article.appendChild(h2);
     }
+    h2.textContent = title;
+    article.appendChild(h2);
     article.appendChild(h3);
     article.appendChild(likeicon);
     return article;

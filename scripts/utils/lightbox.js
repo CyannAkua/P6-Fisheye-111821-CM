@@ -35,15 +35,24 @@ function displayLightbox() {
 function closeLightbox() {
   lightboxBg.style.display = "none";
 }
-articlePic.addEventListener("keypress", runLightbox, Event);
-closeCross.addEventListener("click", closeLightbox, Event);
-articlePic.addEventListener("click", runLightbox, Event);
-function runLightbox(event) {
-  if (event.target !== event.currentTarget) {
-    currentTarget = event.target.parentElement;
-    displayLightbox();
-    pic();
+
+function articlePicEL() {
+  for (let i = 0; i < articlePic.children.length; i++) {
+    articlePic.children[i].children[0].addEventListener(
+      "keypress",
+      runLightbox
+    );
+    articlePic.children[i].children[0].addEventListener("click", runLightbox);
   }
+}
+
+closeCross.addEventListener("click", closeLightbox);
+
+function runLightbox(event) {
+  currentTarget = event.target.parentElement;
+  console.log(currentTarget);
+  displayLightbox();
+  pic();
 }
 //lightboxBg.children[0].addEventListener("click", (e) => {
 //if (e.target !== e.currentTarget) {
