@@ -3,7 +3,7 @@ function photographerFactory(data) {
 
     const picture = `assets/PhotographersIDPhotos/${portrait}`;
 
-    function getUserCardDOM() {
+    function getPhotoCardDOM() {
         const header = document.querySelector(".photograph-header");
         const likenprice = document.querySelector(".like-n-price")
         const img = document.createElement( 'img' );
@@ -35,5 +35,5 @@ function photographerFactory(data) {
         likenprice.appendChild(likeicon);
         return (header);
     }
-    return { getUserCardDOM }
+    return { getPhotoCardDOM}
 }

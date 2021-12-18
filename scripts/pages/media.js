@@ -15,7 +15,7 @@ async function getMedia() {
 async function displayData() {
   media.forEach((_media) => {
     const mediaModel = mediaFactory(_media);
-    const mediaCardDOM = mediaModel.getUserCardDOM();
+    const mediaCardDOM = mediaModel.getMediaCardDOM();
     mediaSection.appendChild(mediaCardDOM);
   });
 }

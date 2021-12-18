@@ -14,5 +14,5 @@ async function getPhotographer() {
 
 async function displayHeader(photographer) {
   const photographerModel = photographerFactory(photographer);
-  photographerModel.getUserCardDOM();
+  photographerModel.getPhotoCardDOM();
 }

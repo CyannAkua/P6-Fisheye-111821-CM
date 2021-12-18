@@ -3,7 +3,7 @@ function mediaFactory(data) {
 
   const picture = `assets/Medias/${image}`;
   const mp4 = `assets/Medias/${video}`;
-  function getUserCardDOM() {
+  function getMediaCardDOM() {
     const article = document.createElement("article");
     const img = document.createElement("img");
     const vdo = document.createElement("video");
@@ -32,5 +32,5 @@ function mediaFactory(data) {
     article.appendChild(likeicon);
     return article;
   }
-  return { getUserCardDOM };        
+  return { getMediaCardDOM};        
 }

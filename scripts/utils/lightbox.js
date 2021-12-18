@@ -54,12 +54,6 @@ function runLightbox(event) {
   displayLightbox();
   pic();
 }
-//lightboxBg.children[0].addEventListener("click", (e) => {
-//if (e.target !== e.currentTarget) {
-//} else {
-//closeLightbox();
-//}
-//});
 previousArrow.addEventListener("click", PreviousPic);
 function PreviousPic() {
   currentTarget = currentTarget.previousSibling;
