@@ -69,14 +69,13 @@ function pic() {
     videoHold.src = currentTarget.children[0].src;
     videoHold.style.display = "block";
     imageHold.style.display = "none";
-    imageName.innerText = "";
   } else {
     imageHold.style.display = "";
     videoHold.style.display = "none";
     imageHold.src = currentTarget.children[0].src;
     imageHold.alt = currentTarget.children[1].innerText;
-    imageName.innerText = currentTarget.children[1].innerText;
   }
+  imageName.innerText = currentTarget.children[1].innerText;
   checkArrow();
 }
 

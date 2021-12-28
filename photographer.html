@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <title>Fisheye</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title></title>
   </head>
   <body>
     <header>
@@ -28,19 +28,15 @@
               <div class="listOption" tabindex="0" onclick="selectListOption()">Titre</div>
             </div>
           </div>
-        </select>
-      </label>
-      </div>
-      <div class="media-section">
-      </div>
+      <div class="media-section"></div>
       <div class="like-n-price"></div>
     </main>
     <div id="contact_modal">
 			<div class="modal">
-				<header>
+				<div class="modal-header">
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" tabindex="0" alt="fermer" onkeypress="closeModal()"   onclick="closeModal()" />
-        </header>
+        </div>
 				<form name="contact" onsubmit="return contactSubmit()">
 					<div>
 						<label for="first">Prénom</label>
@@ -70,12 +66,11 @@
               required
              />
             <label for="message">Votre message</label>
-						<input
+						<textarea
               class="text-control"
-              type="text"
               id="message"
               name="message"
-             />
+             ></textarea>
 					</div>
           <input type="submit" class="contact_button" value="Envoyer"/>
 				</form>
@@ -84,7 +79,7 @@
     <div class="lightbox_bg">
       <div class="lightbox">
         <img class="lightbox-previous" alt="précédent" tabindex="0" onkeypress="PreviousPic()"  src="assets/icons/arrow.svg">
-        <img class="image-hold">
+        <img class="image-hold" src="assets/images/logo.png" alt="">
         <video class="video-hold" controls  autoplay>
           </video>
         <div class="image-name"></div>

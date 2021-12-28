@@ -18,16 +18,14 @@ function toggleListOptions()
 	}
 }
 list.children[1].addEventListener("keypress",selectListOption)
-function selectListOption()
+function selectListOption(event)
 {
-  console.log(event)
     // l'option clicked
 	const option = event.target;
 	// la valeur de l'option clicked
 	const optionValue = option.innerText;
     // le champ visible qui contient la valeur actuelle
 	const listValue = list.children[0].children[0];
-    console.log(optionValue)
 	// move current list value to clicked option
 	option.innerText = listValue.innerText;
 	// put old value of clicked option in list value

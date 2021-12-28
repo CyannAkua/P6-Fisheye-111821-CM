@@ -9,9 +9,10 @@ function closeModal() {
 
 function modalName(data) {
   const { name } = data;
-
-  const modalHeader = document.querySelector(".modal header h2");
-  modalHeader.innerHTML += "<br>" + name;
+  const modalHeader = document.querySelector(".modal-header");
+  const h2 = document.createElement("h2");
+  h2.textContent = name
+  modalHeader.appendChild(h2)
   return modalHeader;
 }
 function contactSubmit() {
