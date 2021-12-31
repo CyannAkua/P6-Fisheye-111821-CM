@@ -18,6 +18,7 @@ function toggleListOptions()
 	}
 }
 list.children[1].addEventListener("keypress",selectListOption)
+list.children[1].addEventListener("click",selectListOption)
 function selectListOption(event)
 {
     // l'option clicked
