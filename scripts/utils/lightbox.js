@@ -50,7 +50,6 @@ closeCross.addEventListener("click", closeLightbox);
 
 function runLightbox(event) {
   currentTarget = event.target.parentElement;
-  console.log(currentTarget);
   displayLightbox();
   pic();
 }

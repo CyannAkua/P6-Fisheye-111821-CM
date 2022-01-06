@@ -22,13 +22,13 @@ list.children[1].addEventListener("click",selectListOption)
 function selectListOption(event)
 {
     // l'option clicked
-	const option = event.target;
+	const option = event;
 	// la valeur de l'option clicked
-	const optionValue = option.innerText;
+	const optionValue = option.target.innerText;
     // le champ visible qui contient la valeur actuelle
 	const listValue = list.children[0].children[0];
 	// move current list value to clicked option
-	option.innerText = listValue.innerText;
+	option.target.innerText = listValue.innerText;
 	// put old value of clicked option in list value
 	listValue.innerText = optionValue;
     sortBy = list.children[0].children[0].innerText
